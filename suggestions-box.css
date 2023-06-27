@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+.card-wrapper{
+    border: 1px solid #14f7ff;
+    padding: 10px;
+    width: 300px;
+    height: 850px;
+    color: #14f7ff;
+    background-color:#001414;
+    border-radius: 25px;
+    font-family: sans-serif;
+
+  }
+  .card-wrapper ul {
+    display: flex;
+    flex-direction: column;
+
+     }
+
+.card-wrapper ul li {
+    border-bottom: 1px solid #14f7ff;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    color: #14f7ff;
+    background-color: #001414;
+    font-family: sans-serif;
+    list-style-type: none;
+    justify-content: left;
+
+     }
+     .card-wrapper ul li:hover{
+      opacity: 0.5px;
+      background-color: #1b1577;
+      cursor: pointer;
+       }
+
+  .add-line{
+    background-color: #001414;
+    color: #14f7ff ;
+    justify-content: end;
+    border: none;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  .add-line:hover{
+    opacity: 0.125px;
+    cursor: pointer;
+    background-color: #1d498f;
+  }
+  .cross{
+    background-color: #001414;
+    color: #14f7ff ;
+    justify-content: end;
+    border: none;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  .cross:hover{
+    opacity: 0.125px;
+    cursor: pointer;
+    background-color: #1d498f;
+  }
+  @media(max-width: 800px) {
+    .media-span {
+      display: none;
+    }
+  }

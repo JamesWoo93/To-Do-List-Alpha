@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TDYT To-Do List</title>
+  <!-- Links to the icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="navbar2.css">
+
+  <!-- Yue Fong's CSS Link -->
+
+  <link rel="stylesheet" href="./chow.css">
+  <link rel="stylesheet" href="./curtains.css">
+
+  <!-- End of Yue Fong's CSS Link -->
+
+<!-- James' CSS Link -->
+<link rel="stylesheet" href="./suggestions-box.css", type="text/css">
+<!-- End of James' CSS Link -->
+
+</head>
+<body>
+
+
+  <!-- Opening "curtains" -->
+
+  <div class="opening-container" id="opening-curtain">
+    <div class="opening-bars opening-slide-left"></div>
+    <div class="opening-bars opening-slide-right">THE</div>
+    <div class="opening-bars opening-slide-left">DRIBBLING</div>
+    <div class="opening-bars opening-slide-right">YOUNG</div>
+    <div class="opening-bars opening-slide-left">TRAILBLAZERS</div>
+    <div class="opening-bars opening-slide-right">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="opening-bars opening-slide-left"></div>
+  </div>
+
+  <!-- End of Opening "curtains" -->
+
+
+  <!-- Joel's Navigation bar-->
+  <div class="navbar">
+    <a href="#" class="navbar-brand">TDYT To-Do</a>
+    <div class="navbar-links">
+      <button class="navbar-link add-tasks-button" onclick="displayAddTasksContainer()"><i class="fas fa-tasks"></i><span class="media-span"> Tasks</span></button>
+      <a href="#" class="navbar-link"><i class="fas fa-exclamation-circle"></i><span class="media-span"> Important</span></a>
+      <a href="#" class="navbar-link"><i class="far fa-calendar-alt"></i><span class="media-span"> Planned</span></a>
+      <a href="#" class="navbar-link"><i class="far fa-user"></i><span class="media-span"> Assigned to you</span></a>
+      <a href="#" class="navbar-link"><i class="far fa-sun"></i><span class="media-span"> My Day</span></a>
+      <a href="#" class="navbar-link"><i class="fas fa-check"></i><span class="media-span"> Completed</span></a>
+      <a href="#" class="navbar-link"><span class="media-span"> &#128722; Groceries</span></a>
+    </div>
+  </div>
+<!-- End of Joel's Navigation bar-->
+
+
+  <!-- Yue Fong's add tasks bar-->
+
+  <div class="add-tasks-container" id="add-tasks-html">
+    <div class="add-tasks-popup">
+      <div class="add-tasks-top">
+        <h2 class="add-tasks-top-left">Add Tasks</h2>
+        <div class="add-tasks-top-right">
+          <button class="add-tasks-top-right-button" onclick="hideAnimation()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>            
+          </button>
+        </div>
+      </div>
+      <div class="add-tasks-bar">
+        <div class="add-tasks-bar-left">
+          <button class="add-tasks-bar-left-button" id="add-tasks-button" onclick="toAddTasks()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>            
+          </button>
+        </div>
+        <div class="add-tasks-bar-input">
+          <input type="text" placeholder="Add a task" id="input-field">
+        </div>
+      </div>
+      <div class="add-tasks-display" id="output-tasks-div"></div>
+    </div>
+  </div>
+
+  <!-- End of Yue Fong's add tasks bar-->
+
+
+  <!-- James' Suggestions box -->
+  <div class="card-wrapper">
+    <h2>Suggestions <button class="cross">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"> 
+        <g fill="currentColor"> <path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z">
+            </path></g>
+        </svg>
+     </button> </h2>
+    <ul>
+     <li>
+     
+         Chicken <span>
+             <button class="add-line">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                     <g class="nc-icon-wrapper" fill="currentColor">
+                     <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path> </g>
+                 </svg>
+
+             </button>
+         </span> <br>
+         &#128722; Groceries
+         
+    </li>
+    <li> Milk <span>
+     <button class="add-line">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+             <g class="nc-icon-wrapper" fill="currentColor">
+             <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path> </g>
+         </svg>
+
+     </button>
+ </span> <br>
+     &#128722; Groceries
+ </li>
+ <li> Bananas <span>
+     <button class="add-line">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+             <g class="nc-icon-wrapper" fill="currentColor">
+             <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path> </g>
+         </svg>
+
+     </button>
+ </span> <br>
+     &#128722; Groceries
+ </li>
+ <li> Rice <span>
+  <button class="add-line">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <g class="nc-icon-wrapper" fill="currentColor">
+          <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path> </g>
+      </svg>
+
+  </button>
+</span> <br>
+  &#128722; Groceries
+</li>
+<li> Salmon <span>
+  <button class="add-line">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <g class="nc-icon-wrapper" fill="currentColor">
+          <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path> </g>
+      </svg>
+
+  </button>
+</span> <br>
+  &#128722; Groceries
+</li>
+    </ul>
+ </div>    
+  <!-- End of James' Suggestions box -->
+
+  
+
+
+
+
+  <!-- Yue Fong's JavaScript Link -->
+  <script src="./chow.js"></script>
+  <!-- End of Yue Fong's JavaScript Link -->
+</body>
+</html>
